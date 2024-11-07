@@ -4,7 +4,7 @@ from selenium import webdriver
 
 
 @pytest.fixture(scope='function')
-def open_browser(request):
+def open_browser():
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
     options.add_argument('--no-sandbox')
