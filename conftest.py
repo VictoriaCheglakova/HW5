@@ -3,7 +3,7 @@ from selene import browser
 from selenium import webdriver
 
 
-@pytest.fixture
+@pytest.fixture(scope='function')
 def open_browser():
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
