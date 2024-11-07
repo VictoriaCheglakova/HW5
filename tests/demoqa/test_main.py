@@ -22,7 +22,7 @@ def add_data():
     browser.element('label[for="hobbies-checkbox-2"]').click()
     browser.element('#subjectsInput').type('c').click()
     browser.element('.subjects-auto-complete__input').element("//*[text()='Computer Science']").click()
-    browser.element('#uploadPicture').send_keys(os.path.abspath('cat.jpg'))
+    browser.element('#uploadPicture').send_keys(os.path.abspath('../../cat.jpg'))
     browser.element('#currentAddress').should(be.blank).type('Простоквашино, д. 1')
     # Добавлен скролл строницы для доступа к следующим элементам. Обычно его упаковывают в цикл для прокрутки всей страницы
     browser.execute_script("window.scrollBy(0,100)")
